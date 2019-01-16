@@ -79,7 +79,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/组件化/" data-id="cjqykkm980000p4fy4vqkkwn2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/25/组件化/" data-id="cjqykn3en0000q2fy9s6szv8d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +192,7 @@
 <p>2.阅读过哪些框架的源码?能说说它的架构方式吗</p>
 <p>49、iOS iAP内购审核可能失败的问题</p>
 <p>50、IAP内购中虚拟货币导致审核无法通过的问题？</p>
-<p>#<font color="#0099ff">面试整理</font><br>1、TableView卡顿的优化~案例~tableView的重用机制？<br>2、<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3、三方库的解析</span><br><span class="line">4、LRU、LFU，数据持久化储存（Least Frequently Used）（Least recently used，最近最少使用）</span><br><span class="line">5、GCD用的多吗？都怎么用的，```group、notify，berries，semaphore</span><br></pre></td></tr></table></figure></p>
+<p><font color="#0099ff">面试整理</font><br>1、TableView卡顿的优化~案例~tableView的重用机制？<br>2、<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3、三方库的解析</span><br><span class="line">4、LRU、LFU，数据持久化储存（Least Frequently Used）（Least recently used，最近最少使用）</span><br><span class="line">5、GCD用的多吗？都怎么用的，```group、notify，berries，semaphore</span><br></pre></td></tr></table></figure></p>
 <p>6、布局方式<br>7、<code>KVO</code>的实现原理，<code>NSKVONotifying_A</code><br>8、性能优化<br>9、<code>runtime</code>用的多吗<br>10、</p>
 <p>11、擅长的东西<br>12、<code>js</code>交互<br>13、移动端目前的打包方式，内部发布的时候怎么进行安装！<br>14、property的修饰符有哪些<a href="https://www.jianshu.com/p/de6328fda59c" target="_blank" rel="noopener">来自 简书</a></p>
 <p>15、<code>runloop，mode有timer、source、common和observer</code>等<br>16、bug处理，dsym，<br>17、移动端线上测试，mqc，最大崩溃率，体验不好，临时处理方式<br>pod ‘Bugly’腾讯出品，都怎么调试，</p>
@@ -202,7 +202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/面试心得/" data-id="cjqykkm9i0001p4fy7dskhwyw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/25/面试心得/" data-id="cjqykn3ex0001q2fyjm1hvt5u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -225,12 +225,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h4><p><strong>目的</strong></p>
-<blockquote>
 <p>为了利于项目维护以及规范开发，促进成员之间<code>Code Review</code>的效率，故提出以下开发规范，如有更好的建议，欢迎提出。<br>本文档的预期读者包括：<code>iOS开发人员</code>。</p>
-</blockquote>
-<blockquote>
 <p>代码中的命名严禁使用拼音与英文混合的方式,更不允许直接使用中文的方式。正确的英文拼写和语法可以让阅读者易于理解,避免歧义。</p>
-</blockquote>
 <p>*注意：即使纯拼音命名方式也要避免采用。但<code>alibab、taobao、youku、hangzhou</code>等国际通用的名称，可视同英文.</p>
 <p>小驼峰原则：第一个单词首字母小写，其余都大写。例：nameTextField。</p>
 <p><strong>项目命名</strong></p>
@@ -349,9 +345,7 @@
 </table>
 <p><strong>类目</strong><br>XXX+（范围，例如Extension， Additions 或者功能，例如Frame，Nib，Block）<br>HYCUIButton+Additions、HYCUIButton+Block</p>
   <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIViewController</span>请按照如下分类</span><br><span class="line"><span class="meta">#pragma mark - life cycle</span></span><br><span class="line"><span class="meta">#pragma mark - event response</span></span><br><span class="line"><span class="meta">#pragma mark - UITableViewDelegate &amp;&amp; UITableViewDataSource</span></span><br><span class="line">（代理顺序往下排列）</span><br><span class="line"><span class="meta">#pragma mark - getters and setters</span></span><br><span class="line"><span class="meta">#pragma mark - private</span></span><br></pre></td></tr></table></figure>
-<blockquote>
 <p>注意：所有视图或者对象的创建请尽量使用懒加载，调用的时候全部使用self.textBtn这样的方式。如果是确定的不可变数组、字典，可直接给定数组中的元素。(getters and setters分类中，懒加载可出现_调用对象，其它情况请遵循self.调用原则)</p>
-</blockquote>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>)<span class="built_in">UIButton</span> * textBtn;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">    <span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#pragma mark - life cycle</span></span><br><span class="line">    - (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">        [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">        [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.textBtn];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    - (<span class="keyword">void</span>)didReceiveMemoryWarning &#123;</span><br><span class="line">        [<span class="keyword">super</span> didReceiveMemoryWarning];</span><br><span class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">#pragma mark - private </span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#pragma mark - event response</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#pragma mark - UITableViewDelegate &amp;&amp; UITableViewDataSource</span></span><br><span class="line"><span class="comment">//（代理顺序往下排列）</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#pragma mark - CTAPIManagerCallBackDelegate</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#pragma mark - getters and setters</span></span><br><span class="line">    - (<span class="built_in">UIButton</span> *)textBtn</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (_textBtn == <span class="literal">nil</span>) &#123;</span><br><span class="line">            _textBtn = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line">            _textBtn.frame = <span class="built_in">CGRectMake</span>(<span class="number">300</span>, <span class="number">250</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">            _textBtn.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</span><br><span class="line">            _textBtn.titleLabel.text = <span class="string">@"text"</span>;</span><br><span class="line">            [_textBtn addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(text) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> _textBtn;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
 <p><strong>变量和方法</strong><br>变量和方法的命名都遵循小驼峰命名。例如：textVariableStr, - (void)textAction响应事件。<br>变量命名对照表（如果用到下表中没有列举出来，请去掉UI、NS遵循实际规则即可。或者一看就知道的通用简写）<br>方法命名对照表（方法多为动词或动名词）</p>
@@ -553,7 +547,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/代码规范/" data-id="cjqykkm9r0002p4fyyoi5efoi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/25/代码规范/" data-id="cjqykn3f70002q2fyc2je4yx8" class="article-share-link">Share</a>
       
       
     </footer>
