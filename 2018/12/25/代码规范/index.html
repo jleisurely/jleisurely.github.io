@@ -7,13 +7,17 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="代码规范目的  为了利于项目维护以及规范开发，促进成员之间Code Review的效率，故提出以下开发规范，如有更好的建议，欢迎提出。本文档的预期读者包括：iOS开发人员。   代码中的命名严禁使用拼音与英文混合的方式,更不允许直接使用中文的方式。正确的英文拼写和语法可以让阅读者易于理解,避免歧义。  *注意：即使纯拼音命名方式也要避免采用。但alibab、taobao、youku、hangzho">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/12/25/代码规范/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="代码规范目的  为了利于项目维护以及规范开发，促进成员之间Code Review的效率，故提出以下开发规范，如有更好的建议，欢迎提出。本文档的预期读者包括：iOS开发人员。   代码中的命名严禁使用拼音与英文混合的方式,更不允许直接使用中文的方式。正确的英文拼写和语法可以让阅读者易于理解,避免歧义。  *注意：即使纯拼音命名方式也要避免采用。但alibab、taobao、youku、hangzho">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-10T05:58:17.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="代码规范目的  为了利于项目维护以及规范开发，促进成员之间Code Review的效率，故提出以下开发规范，如有更好的建议，欢迎提出。本文档的预期读者包括：iOS开发人员。   代码中的命名严禁使用拼音与英文混合的方式,更不允许直接使用中文的方式。正确的英文拼写和语法可以让阅读者易于理解,避免歧义。  *注意：即使纯拼音命名方式也要避免采用。但alibab、taobao、youku、hangzho">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,36 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-组件化" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/25/组件化/" class="article-date">
-  <time datetime="2018-12-25T09:18:17.831Z" itemprop="datePublished">2018-12-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>iOS-Component/<br>  |- readme.md （说明）<br>  |- HYC工程/<br>  |    |- Config/ （基础配置文件）<br>  |    |- Modules/ （功能模块）<br>  |    |    |- Home/<br>  |    |    |    |- Connector/ (接入点)<br>  |    |    |    |- Model/ (内部数据模型)<br>  |    |    |    |- Service/ (该组件的网络接口请求以及网络回调回来的数据转Model工作)<br>  |    |    |    |- UI/ (页面存放位置)<br>  |    |    |    |- / ()<br>  |    |    |- Mine/<br>  |    |    |- …/<br>  |    |    |- Login/<br>  |    |- Manager/ (管理模块)<br>  |    |- CommonParty/ （基础内部通用文件，如添加或修改，需经过论证）<br>  |    |    |-<br>  |    |    |-<br>  |    |    |-<br>  |    |- ThirdParty/ （基础外来三方文件，如添加或修改，需经过论证）<br>  |    |    |-<br>  |    |    |-<br>  |    |    |-<br>  |    |- Define/ (全局宏定义)<br>  |    |- Base/ （基础文件，如修改，需经过论证）<br>  |    |    |- Frame/ (布局)<br>  |    |    |    |- UIViewAdditions/<br>  |    |    |- DataBase/ （数据库）<br>  |    |    |- HttpReq/ (网络请求)<br>  |    |    |- Root/ (基类)<br>  |    |    |- PostModel/ (基础Model)<br>  |    |    |- Utils/ (工具类)<br>  |    |    |-<br>  |    |    |-<br>  |    |    |-<br>  |    |- Assets.xcassets/ (图片)<br>  |    |- Resource/ (资源文件夹)<br>  |    |- Supporting Files<br>  |<br>  |<br>  |    |-Pod/ （Pod导入文件列表）<br>  |    |    |- AFNetWroking<br>  |    |    |- SDWebImage<br>  |    |    |- FMDB<br>  |    |    |- Reachability<br>  |    |    |- MJRefresh<br>  |    |    |- MJExtension<br>  |    |    |- MBProgressHUD<br>  |    |    |- NullSafe<br>  |    |    |- IQKeyboardManager<br>  |    |    |- FSCalendar<br>  |    |    |- pop<br>  |    |    |-<br>  |    |    |-<br>  |    |    |-<br>  |<br>  |<br>  |<br>  |<br>  |<br>  |<br>  |</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/组件化/" data-id="cjqyjgcrt0000m0fyaj7yggj8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-代码规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-代码规范" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/25/代码规范/" class="article-date">
   <time datetime="2018-12-25T01:34:26.250Z" itemprop="datePublished">2018-12-25</time>
@@ -436,11 +411,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/25/组件化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-
+</article>
 
 </section>
         
