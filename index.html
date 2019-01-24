@@ -62,6 +62,39 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-pod私有化，在组件中包含*.xcassets资源时需要做什么" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/24/pod私有化，在组件中包含*.xcassets资源时需要做什么/" class="article-date">
+  <time datetime="2019-01-24T09:07:30.457Z" itemprop="datePublished">2019-01-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="pod私有化，在组件中包含-xcassets资源时需要做什么"><a href="#pod私有化，在组件中包含-xcassets资源时需要做什么" class="headerlink" title="pod私有化，在组件中包含*.xcassets资源时需要做什么"></a>pod私有化，在组件中包含*.xcassets资源时需要做什么</h2><p>在百度上搜索了上百条信息，我是真的要吐槽一下，真的搜不到呀，下面的文章记录一下，以防以后忘记了！</p>
+<p>这里只是针对这个问题做一个解释，如有问题，请留下宝贵意见：</p>
+<p>1、需要在*.podspec文件中加入如下代码</p>
+<pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">s.resource_bundle = &#123;</span><br><span class="line">  'AAA' =&gt; ['目录/Assets/*.xcassets'] #AAA为生成boudle的名称，随便起，记下，下面要用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><p>2、在需要引入*.xcassets中的图片资源时，调用如下方法：</p>
+<pre><code><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">UIImage</span> *img = [<span class="keyword">self</span> getImageWithBoudleName:<span class="string">@"AAA"</span> imgName:<span class="string">@"图片名称"</span>];</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)getImageWithBoudleName:(<span class="built_in">NSString</span> *)boudleName imgName:(<span class="built_in">NSString</span> *)imgName &#123;</span><br><span class="line"><span class="built_in">NSBundle</span> *bundle = [<span class="built_in">NSBundle</span> bundleForClass:[<span class="keyword">self</span> <span class="keyword">class</span>]];</span><br><span class="line"><span class="built_in">NSURL</span> *url = [bundle URLForResource:boudleName withExtension:<span class="string">@"bundle"</span>];</span><br><span class="line"><span class="built_in">NSBundle</span> *targetBundle = [<span class="built_in">NSBundle</span> bundleWithURL:url];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageNamed:imgName</span><br><span class="line">                            inBundle:targetBundle</span><br><span class="line">       compatibleWithTraitCollection:<span class="literal">nil</span>];</span><br><span class="line"><span class="keyword">return</span> image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5NzMwODI0MA==&amp;mid=2647759665&amp;idx=1&amp;sn=4b1f2fde434f1b45ff3eac627a7b7fd9" target="_blank" rel="noopener">特别鸣谢</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/24/pod私有化，在组件中包含*.xcassets资源时需要做什么/" data-id="cjraeqonb0000f1fyq51ksjxq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-iPad机型" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/01/23/iPad机型/" class="article-date">
@@ -79,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/23/iPad机型/" data-id="cjr8i1pw600003bfy2z04ui2a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/23/iPad机型/" data-id="cjraeqonh0001f1fy08111pby" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/组件化/" data-id="cjr8i1pwn00013bfyjb6iqpbo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/25/组件化/" data-id="cjraeqons0002f1fyqrs9mi7k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -229,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/面试心得/" data-id="cjr8i1pwy00023bfy9h85w5yl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/25/面试心得/" data-id="cjraeqoo10003f1fya290k46c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -574,7 +607,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/25/代码规范/" data-id="cjr8i1px000033bfyi0d1eej2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/25/代码规范/" data-id="cjraeqoo50004f1fy4g92is61" class="article-share-link">Share</a>
       
       
     </footer>
@@ -613,6 +646,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/01/24/pod私有化，在组件中包含*.xcassets资源时需要做什么/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2019/01/23/iPad机型/">(no title)</a>
